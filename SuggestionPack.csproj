@@ -339,25 +339,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Internal\Interfaces\INonItemPickup.cs" />
-    <Compile Include="Internal\Items\Upgraders\ITM_StickerStacker.cs" />
-    <Compile Include="Internal\Stickers\Upgraders\StickerStacker.cs" />
-    <Compile Include="Internal\Stickers\Upgraders\StickerStackerVariant.cs" />
+    <Compile Include="Internal\Interfaces\IMultipleUseItem.cs" />
+    <Compile Include="Internal\Interfaces\IObjectPrefab.cs" />
+    <Compile Include="Internal\Items\Bases\MultipleUseItem.cs" />
+    <Compile Include="Internal\Items\Suggestions\Andreyfan\ITM_WireGun.cs" />
     <Compile Include="Internal\Storage\ModdedCache.cs" />
-    <Compile Include="Internal\Storage\PrefabCache.cs" />
     <Compile Include="PackBasePlugin.cs" />
-    <Compile Include="Patches\EnvPatch.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Internal" />
-    <Folder Include="Internal\Interfaces" />
     <Folder Include="Internal\Items" />
-    <Folder Include="Internal\Items\Upgraders" />
+    <Folder Include="Internal\Items\Suggestions\Andreyfan" />
+    <Folder Include="Internal\Interfaces" />
+    <Folder Include="Internal\Items\Bases" />
+    <Folder Include="Internal\Items\Suggestions" />
     <Folder Include="Internal\Storage" />
     <Folder Include="Internal\Stickers" />
-    <Folder Include="Internal\Stickers\Upgraders" />
-    <Folder Include="Patches" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

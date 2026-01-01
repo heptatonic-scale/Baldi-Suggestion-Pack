@@ -13,6 +13,7 @@ using BepInEx;
 using HarmonyLib;
 using MTM101BaldAPI;
 using MTM101BaldAPI.ObjectCreation;
+using MTM101BaldAPI.Registers;
 using SuggestionPack.Internal.Storage;
 using SuggestionPack.Internal.Items.Upgraders;
 
@@ -24,14 +25,14 @@ namespace SuggestionPack
 		void Awake() {
 			Harmony h = new Harmony(base.Info.Metadata.GUID);
 			h.PatchAllConditionals();
+			
+			LoadingEvents.RegisterOnAssetsLoaded(Info, Preload(), LoadingEventOrder.Pre);
 		}
 		
 		IEnumerator Preload() {
 			yield return 3;
 			yield return "Preloading...";
-			ModdedCache.items.Add("Itm_StickerStacker", new ItemBuilder);
-			ModdedCache.stickers.Add("StickerStacker", EnumExtensions.ExtendEnum<Sticker>("StickerStacker"));
-			ModdedCache.extendedStickerDatas.Add("StickerStackerData", new StickerBuilder<ExtendedStickerData>(Info).SetEnum("StickerStacker").SetDuplicateOddsMultiplier(0.5f).Build());
+			
 			yield break;
 		}
 	}

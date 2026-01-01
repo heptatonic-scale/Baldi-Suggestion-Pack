@@ -17,11 +17,7 @@ namespace SuggestionPack.Internal.Storage
 	/// </summary>
 	public class ModdedCache
 	{
-		public static Dictionary<string, ItemObject> items = new Dictionary<string, items>();
-		
-		public static Dictionary<string, Sticker> stickers = new Dictionary<string, Sticker>();
-		
-		public static Dictionary<string, ExtendedStickerData> extendedStickerDatas = new Dictionary<string, ExtendedStickerData>();
+		public static Dictionary<string, ItemObject> items = new Dictionary<string, ItemObject>();
 		
 	}
 }
